@@ -32,3 +32,4 @@ The simulator supports the following CPU scheduling algorithms:
 - **Visualization and Statistics:** Offers both graphical simulation (`trace`) and performance metrics (`stats`).
 - **Multiple Algorithms:** Can simulate various complex scheduling algorithms.
 - **Input Redirection:** Facilitates easy testing and automation with input redirection.
+
