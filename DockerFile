@@ -1,0 +1,22 @@
+# Get the base Ubuntu image from Docker Hub
+FROM ubuntu:latest
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Install necessary dependencies
+RUN apt-get update && apt-get install -y \
+    g++ \
+    libcpprest-dev \
+    libboost-all-dev \
+    libssl-dev \
+    cmake
+
+ #copy source project files ( copy . as the docker file is located in the project directory )
+    copy .
+
+# Build the project using the Makefile
+RUN make
+
+# Specify the default command to execute your program
+CMD ["./lab6"]
